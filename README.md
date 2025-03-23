@@ -45,7 +45,7 @@ The **TPO Placement Portal** is a Django-based web application designed to strea
 
    ```sh
    python -m venv myvenv
-   source venv/bin/activate  # On Windows use: venv\Scripts\activate
+   source myvenv/bin/activate  # On Windows use: venv\Scripts\activate
 
    ```
 

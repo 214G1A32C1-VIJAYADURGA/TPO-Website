@@ -40,8 +40,14 @@ The **TPO Placement Portal** is a Django-based web application designed to strea
 - **External Services**: SMTP (Email), Google Custom Search API
 
 ## 🏗️ Installation & Setup
+1. ## Clone the Repo
+   ```sh
+   git clone https://github.com/214G1A32C1-VIJAYADURGA/TPO-Website.git
+   cd TPO-Website
+   
+   ```
 
-1. **Create a virtual environment**
+2. **Create a virtual environment**
 
    ```sh
    python -m venv myvenv
@@ -49,21 +55,29 @@ The **TPO Placement Portal** is a Django-based web application designed to strea
 
    ```
 
-2. **Install dependencies**
+3. **Install dependencies**
 
    ```sh
+   pip install django
    pip install -r requirements.txt
 
    ```
 
-3. **Run migrations**
+4. **Run migrations**
 
    ```sh
    python manage.py migrate
 
    ```
+   
+5. **Create Superuser(Admin)**
 
-4. **Start the server**
+   ```sh
+   python manage.py createsuperuser
+
+   ```
+
+6. **Start the server**
 
    ```sh
    python manage.py runserver

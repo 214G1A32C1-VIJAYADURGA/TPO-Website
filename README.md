@@ -39,7 +39,53 @@ The **TPO Placement Portal** is a Django-based web application designed to strea
 - **Database**: PostgreSQL / MySQL
 - **External Services**: SMTP (Email), Google Custom Search API
 
+## 🔎 Prerequisites
+
+Before starting the installation, make sure the following are installed:
+
+### Check Python Version
+
+Django works best with **Python 3.10+** (Recommended: **Python 3.11**)
+
+```bash
+python --version
+```
+
+or
+
+```bash
+python3 --version
+```
+
+Expected output:
+```
+Python 3.11.x
+```
+
+---
+
+### Check pip Installation
+pip is the package manager for Python and is required to install Django and other dependencies.
+
+```bash
+pip --version
+```
+
+or
+
+```bash
+python -m pip --version
+```
+
+If pip is not installed:
+- Reinstall Python
+- Make sure ✔ “Add Python to PATH” is selected
+- Ensure ✔ “Install pip” option is enabled
+
+---
+
 ## 🏗️ Installation & Setup
+During the installation process check python version which supports Django usally 3.11 version needs to be installed and also check whether pip is installed or not during the python setup 
 1. ## Clone the Repo
    ```sh
    git clone https://github.com/214G1A32C1-VIJAYADURGA/TPO-Website.git

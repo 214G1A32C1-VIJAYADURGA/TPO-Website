@@ -141,8 +141,9 @@ Or you can use existing credentials if you don’t want to create a new superuse
 ```
 Username: admin
 password: 123456
+```
 
-# 🔟 Run Django Project
+### 🔟 Run Django Project
 ```bash
 python manage.py runserver
 ```

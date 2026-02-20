@@ -83,7 +83,7 @@ pyenv --version
 ### 4️⃣ Install Python 3.11
 
 ```bash
-pyenv install 3.11.9
+pyenv install 3.11.9 (This will take a few minutes. Wait until you install python.)
 ```
 
 ---
@@ -92,7 +92,7 @@ pyenv install 3.11.9
 
 ```bash
 cd /workspaces/TPO-Website
-pyenv local 3.11.9
+pyenv local 3.11.9 
 python --version
 ```
 
@@ -123,11 +123,27 @@ pip install --upgrade httplib2
 
 ---
 
-### 8️⃣ Run Django Project
+### 8️⃣ Run Migrations 
 
 ```bash
 python manage.py migrate
+
+```
+
+### 9️⃣ Create Admin Credentials(For TPO, Admin Logins)
+```bash
 python manage.py createsuperuser
+
+```
+
+Or you can use existing credentials if you don’t want to create a new superuser.
+
+```
+Username: admin
+password: 123456
+
+# 🔟 Run Django Project
+```bash
 python manage.py runserver
 ```
 

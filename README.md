@@ -40,51 +40,114 @@ The **TPO Placement Portal** is a Django-based web application designed to strea
 - **External Services**: SMTP (Email), Google Custom Search API
 
 
-# 1️⃣ Install dependencies (only once)
+## 🚀 Setup Python 3.11 in GitHub Codespaces (Ubuntu 24.04)
+
+### 1️⃣ Install Required System Dependencies
+
+```bash
 sudo apt update
 sudo apt install -y make build-essential libssl-dev zlib1g-dev \
 libbz2-dev libreadline-dev libsqlite3-dev curl git \
 libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev \
 libffi-dev liblzma-dev
+```
 
-# 2️⃣ Install pyenv
+---
+
+### 2️⃣ Install pyenv
+
+```bash
 curl https://pyenv.run | bash
+```
 
-# 3️⃣ Add pyenv to bash
+---
+
+### 3️⃣ Configure pyenv
+
+```bash
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 source ~/.bashrc
+```
 
-# 4️⃣ Verify
+Verify installation:
+
+```bash
 pyenv --version
+```
 
-# 5️⃣ Install Python 3.11
+---
+
+### 4️⃣ Install Python 3.11
+
+```bash
 pyenv install 3.11.9
+```
 
-# 6️⃣ Set for project
+---
+
+### 5️⃣ Set Python 3.11 for Project
+
+```bash
 cd /workspaces/TPO-Website
 pyenv local 3.11.9
+python --version
+```
 
-python --version  # should show 3.11.9
+Expected Output:
 
-# 7️⃣ Create virtual environment
+```bash
+Python 3.11.9
+```
+
+---
+
+### 6️⃣ Create and Activate Virtual Environment
+
+```bash
 python -m venv myvenv
-
-# 8️⃣ ACTIVATE (Linux version )
 source myvenv/bin/activate
+```
 
-# 9️⃣ Install dependencies
-pip install --upgrade pip
+---
+
+### 7️⃣ Install Project Dependencies
+
+```bash
 pip install django
 pip install -r requirements.txt
 pip install --upgrade httplib2
+```
 
-# 🔟 Run Django
+---
+
+### 8️⃣ Run Django Project
+
+```bash
 python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
+```
+
+## ✅ Notes
+
+- GitHub Codespaces runs on Linux (Ubuntu), so activation uses:
+  
+  ```bash
+  source myvenv/bin/activate
+  ```
+
+- Do NOT use:
+  
+  ```bash
+  myvenv\Scripts\activate
+  ```
+  (That is for Windows local setup)
+
+---
+  
 
 ## 🔎 Prerequisites
 

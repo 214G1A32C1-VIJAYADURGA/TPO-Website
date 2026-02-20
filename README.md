@@ -39,6 +39,53 @@ The **TPO Placement Portal** is a Django-based web application designed to strea
 - **Database**: PostgreSQL / MySQL
 - **External Services**: SMTP (Email), Google Custom Search API
 
+
+# 1️⃣ Install dependencies (only once)
+sudo apt update
+sudo apt install -y make build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev curl git \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev \
+libffi-dev liblzma-dev
+
+# 2️⃣ Install pyenv
+curl https://pyenv.run | bash
+
+# 3️⃣ Add pyenv to bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+
+# 4️⃣ Verify
+pyenv --version
+
+# 5️⃣ Install Python 3.11
+pyenv install 3.11.9
+
+# 6️⃣ Set for project
+cd /workspaces/TPO-Website
+pyenv local 3.11.9
+
+python --version  # should show 3.11.9
+
+# 7️⃣ Create virtual environment
+python -m venv myvenv
+
+# 8️⃣ ACTIVATE (Linux version )
+source myvenv/bin/activate
+
+# 9️⃣ Install dependencies
+pip install --upgrade pip
+pip install django
+pip install -r requirements.txt
+pip install --upgrade httplib2
+
+# 🔟 Run Django
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+
 ## 🔎 Prerequisites
 
 Before starting the installation, make sure the following are installed:
@@ -106,6 +153,7 @@ During the installation process check python version which supports Django usall
    ```sh
    pip install django
    pip install -r requirements.txt
+   pip install --upgrade httplib2
 
    ```
 
